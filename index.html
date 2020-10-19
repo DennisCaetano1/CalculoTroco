@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Produtos </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Calculo de troco.</h1>
+        <p class="lead">Sistema para calculo de troco de compras.</p>
+        <hr class="my-4">
+
+        <div id="etapa1">
+            <h1 class="display-4">Valor total da compra: <span id="ValorTotalLabel">0</span></h1>
+            <form>
+                <div class="form-group">
+                    <label for="ValorTotalProduto">Valor do produto</label>
+                    <input type="number" class="form-control" id="ValorTotalProduto"
+                        placeholder="Digite o valor do produto">
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="adicionar()">Adicionar</button>
+            <button class="btn btn-primary" onclick="proximaEtapa()">Proxima etapa</button>
+        </div>
+
+        <div id="etapa2">
+            <form>
+                <div class="form-group">
+                    <label for="ValorPago">Valor pago</label>
+                    <input type="number" class="form-control" id="ValorPago" placeholder="Digite o valor pago">
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="troco()">Calcular</button>
+        </div>
+
+        <div id="etapa3">
+            <span>
+                Resultado: <span id="ResultadoCalculo"></span>
+            </span>
+
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">R$ 100</th>
+                        <th scope="col">R$ 50</th>
+                        <th scope="col">R$ 20</th>
+                        <th scope="col">R$ 10</th>
+                        <th scope="col">R$ 5</th>
+                        <th scope="col">R$ 2</th>
+                        <th scope="col">R$ 1</th>
+                        <th scope="col">R$ 0.50</th>
+                        <th scope="col">R$ 0.25</th>
+                        <th scope="col">R$ 0.1</th>
+                        <th scope="col">R$ 0.05</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td id="nota100"> </td>
+                    <td id="nota50"> </td>
+                    <td id="nota20"> </td>
+                    <td id="nota10"> </td>
+                    <td id="nota5"> </td>
+                    <td id="nota2"> </td>
+                    <td id="moeda1"> </td>
+                    <td id="moeda50"> </td>
+                    <td id="moeda25"> </td>
+                    <td id="moeda10"> </td>
+                    <td id="moeda5"> </td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="index.js">
+
+
+</script>
+</body>
+
+</html>
